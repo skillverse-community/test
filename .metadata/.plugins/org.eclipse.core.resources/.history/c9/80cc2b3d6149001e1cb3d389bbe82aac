@@ -1,0 +1,47 @@
+package org.skillversecommunity;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+public class SampleTest {
+
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception { 
+		System.out.println("I am before class");
+	}
+
+	@AfterClass
+	public static void tearDownAfterClass() throws Exception {
+		System.out.println("I am after class");
+	}
+
+	@Before
+	public void setUp() throws Exception {
+		System.out.println("I am setup");
+	}
+
+	@After
+	public void tearDown() throws Exception {
+	}
+
+	@Test
+	public void test1() {
+		//TODO
+	}
+	
+	@Test
+	public void test2() {
+		//TODO
+	}
+	
+	@Test
+	public void test3() {
+		//TODO
+	}
+
+}

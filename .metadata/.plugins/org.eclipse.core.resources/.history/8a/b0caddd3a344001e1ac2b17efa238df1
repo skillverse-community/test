@@ -1,0 +1,9 @@
+package org.skillversecommunity.junitcourse;
+
+public class Invoice {
+	private String _consumerName;
+	private String _consumerMeterId;
+	private int _billPeriodInDays;
+	private double _billAmount;
+	private double _avgSpendingPerDay;
+}

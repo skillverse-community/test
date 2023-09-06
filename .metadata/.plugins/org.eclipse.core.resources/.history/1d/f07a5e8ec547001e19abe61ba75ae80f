@@ -1,0 +1,8 @@
+package aupp.atc;
+
+public class AlertHandler {
+	public static void main(String args[])
+	{
+	
+	}
+}

@@ -1,0 +1,23 @@
+package org.skillversecommunity;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class TestToy {
+
+	@Test(expected=NullPointerException.class )
+	public void test_isItRightAgeToPlayWith() {
+		Toy t = new Toy("sampleToy", 100, 5, 8);
+		t.isItRightAgeToPlayWith(null);
+	}
+	
+	@Test(timeout = 3000)
+	public void test_costlierBetween()
+	{
+		Toy t1 = new Toy("sampleToy", 100, 5, 8);
+		Toy t2 = new Toy("helloToy", 120, 6, 8);
+		int maxPrice = t1.costlierPriceBetween(t2);
+		assertEquals("the costilier price was not picked up", 120, maxPrice);
+	}
+}

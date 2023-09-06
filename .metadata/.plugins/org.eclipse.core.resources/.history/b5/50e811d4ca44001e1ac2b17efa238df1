@@ -1,0 +1,40 @@
+package org.skillversecommunity.junitcourse;
+
+import java.util.Date;
+
+/**
+ * Represents an IndustrialConsumer
+ * Has all the properties of a BusinessConsumer including generating invoice
+ * @author Lenovo
+ * @author Skillverse Community
+ * @since 27.08.2023
+ * @version 1.0
+ */
+public class IndustrialConsumer extends BusinessConsumer{
+
+	private String _industryType;
+	
+	public IndustrialConsumer(String _consumerName, String _consumerAddress, String _meterId, double _lastMeterReading,
+			double _currentMeterReading, Date _lastMeterRaedingDate, Date _currentMeterReadingDate,
+			String _businessType, String _industryType) {
+		super(_consumerName, _consumerAddress, _meterId, _lastMeterReading, _currentMeterReading, _lastMeterRaedingDate,
+				_currentMeterReadingDate, _businessType);
+		this._industryType = _industryType;
+	}
+
+	/**
+	 * @return the _industryType
+	 */
+	public String get_industryType() {
+		return _industryType;
+	}
+	
+	/**
+	 * @return the Invoice object
+	 */
+	public Invoice generateInvoice()
+	{
+		return null;
+	}
+	
+}

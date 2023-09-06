@@ -1,0 +1,14 @@
+package com.skillverse;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class TestYourClass {
+
+	@Test
+	public void testNullStrInDoubleTheString() {
+		
+	}
+
+}

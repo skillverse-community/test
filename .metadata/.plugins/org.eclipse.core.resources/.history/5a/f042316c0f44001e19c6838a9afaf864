@@ -1,0 +1,41 @@
+package com.skillverse;
+
+public class Sample {
+
+	int _a;
+	int _b;
+	
+	public Sample(int a, int b)
+	{
+		this._a = a;
+		this._b = b;
+	}
+	
+	public int findMax()
+	{
+		int c;
+		if(_a > _b)
+			c = _a;
+		else
+			c = _b;
+		return c;
+	}
+	
+	public int findMin()
+	{
+		int c;
+		if(_a > _b)
+			c = _b;
+		else
+			c = _a;
+		return c;
+	}
+	
+	public boolean isEqual()
+	{
+		if(_a == _b)
+			return true;
+		else
+			return false;
+	}
+}

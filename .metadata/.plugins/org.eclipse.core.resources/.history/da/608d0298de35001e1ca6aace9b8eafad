@@ -1,0 +1,17 @@
+package com.skillverse.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Employee_Tab")
+public class Employee {
+	@Column(name = "emp_id")
+	private int id;
+	@Column(name = "emp_name")
+	private String name;
+	@Column(name = "emp_salary")
+	private double salary;
+
+}

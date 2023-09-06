@@ -1,0 +1,121 @@
+package aupp.atc;
+
+import java.util.List;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Platform;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+public class TestAddToCart {
+
+	public static void main(String[] args) {
+		WebDriver driver;
+		//Setting the GeckoDriver
+		System.setProperty("webdriver.gecko.driver", "C:\\Users\\Lenovo\\Downloads\\geckodriver-v0.33.0-win32\\geckodriver.exe");
+		
+		DesiredCapabilities dc = new DesiredCapabilities();
+		//No to marionatte driver
+		dc.setCapability("marionatte", false);
+		dc.setPlatform(Platform.ANY);
+		//Get Firefox browser
+	    dc.setBrowserName("firefox");
+		
+	    FirefoxOptions opt = new FirefoxOptions();
+		//merge the desired capabilities with options
+		opt.merge(dc);
+		
+		//sethe firefox exe to option
+		opt.setBinary("C:\\Program Files\\Mozilla Firefox\\firefox.exe");
+		
+		//instantiate the driver
+		driver = new FirefoxDriver(opt);
+		
+		//make a get call to sauce demo
+		driver.get("https://www.saucedemo.com/");
+		
+		//supply credential
+		driver.findElement(By.id("user-name")).sendKeys("standard_user");
+		driver.findElement(By.id("password")).sendKeys("secret_sauce");
+		//Login
+		driver.findElement(By.id("login-button")).click();
+		
+		//Get all the Add to Cart buttons
+		List<WebElement> elems = driver.findElements(By.className("btn_inventory"));
+		for(int i = 0; i<elems.size(); i++)
+		{
+			elems.get(i).click(); //Click on each
+		}
+		
+		//Get all the product names
+		List<WebElement> names = driver.findElements(By.className("inventory_item_name"));
+		String [] namesOfAddedProducts = new String[names.size()];
+		for(int i = 0; i<namesOfAddedProducts.length;i++)
+			namesOfAddedProducts[i] = names.get(i).getText();
+
+		//Get all the product description
+		List<WebElement> desc = driver.findElements(By.className("inventory_item_desc"));
+		String [] descOfAddedProducts = new String[desc.size()];
+		for(int i = 0; i<descOfAddedProducts.length;i++)
+			descOfAddedProducts[i] = desc.get(i).getText();
+		
+		//Get all the product prices
+		List<WebElement> prices = driver.findElements(By.className("inventory_item_price"));
+		String [] pricesOfAddedProducts = new String[prices.size()];
+		for(int i = 0; i<pricesOfAddedProducts.length;i++)
+			pricesOfAddedProducts[i] = prices.get(i).getText();
+		
+		//Get the placeholder for the products added
+		Product[] addedProducts = new Product[elems.size()];
+		//Instantiate products and place it on the placeholder
+		for(int i = 0; i<elems.size();i++)
+		{
+			addedProducts[i] = new Product(namesOfAddedProducts[i], descOfAddedProducts[i], Double.parseDouble(pricesOfAddedProducts[i]));
+		}
+
+		//Going to shopping cart page
+		driver.findElement(By.className("shopping_cart_link")).click();
+		//get the no of product added from the badge -- that is the cart size
+		String cartSizeStr = driver.findElement(By.className("shopping_cart_badge")).getText();
+		int cartSize = Integer.parseInt(cartSizeStr);
+		
+		//get all the products that are shown into cart page and put into productShowCase
+		List<WebElement> productShowCase = driver.findElements(By.className("cart_item"));
+
+		//Get all the product names
+		List<WebElement> nameCart = driver.findElements(By.className("inventory_item_name"));
+		String [] nameOfAddedProductsInCart = new String[nameCart.size()];
+		for(int i = 0; i<nameOfAddedProductsInCart.length;i++)
+			nameOfAddedProductsInCart[i] = nameCart.get(i).getText();
+
+		//Get all the product decription
+		List<WebElement> descCart = driver.findElements(By.className("inventory_item_desc"));
+		String [] descOfAddedProductsInCart = new String[descCart.size()];
+		for(int i = 0; i<descOfAddedProducts.length;i++)
+			descOfAddedProductsInCart[i] = descCart.get(i).getText();
+				
+		//Get all the product prices
+		List<WebElement> pricesCart = driver.findElements(By.className("inventory_item_price"));
+		String [] pricesOfAddedProductsInCart = new String[prices.size()];
+		for(int i = 0; i<pricesOfAddedProductsInCart.length;i++)
+			pricesOfAddedProducts[i] = prices.get(i).getText();
+				
+		//Get the placeholder for the products that are there in cart
+		Product[] productsInCart = new Product[elems.size()];
+		//Instantiate products and place it on the placeholder
+		for(int i = 0; i<elems.size();i++)
+		{
+			productsInCart[i] = new Product(nameOfAddedProductsInCart[i], descOfAddedProductsInCart[i], Double.parseDouble(pricesOfAddedProducts[i]));
+		}
+		
+		//if the cart size and the size of the productShow case are same
+		//if 
+		if(cartSize == elems.size() && cartSize == productShowCase.size())
+			System.out.println("Add to cart works well");
+		else
+			System.out.println("Add to cart seems to have problems");
+		System.out.println("Done");
+	}
+}

@@ -1,0 +1,16 @@
+package com.skillversecommunity.suit;
+
+import org.junit.runner.JUnitCore;
+import org.junit.runner.Result;
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
+import org.junit.runners.Suite.SuiteClasses;
+import org.skillversecommunity.example1.TestMyClass;
+
+@RunWith(Suite.class)
+@SuiteClasses({ TestMyClass.class, TestSample.class })
+public class AllTests {
+
+	Result result = JUnitCore.runClasses(AllTests.class);
+	
+}

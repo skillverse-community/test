@@ -1,0 +1,101 @@
+/**
+ * 
+ */
+package com.skillverse;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+/**
+ * @author Shiladitya Munshi
+ *
+ */
+public class TestSample {
+
+	Sample s1 = null;
+	Sample s2 = null; 
+	static int x = 0;
+	
+	/**
+	 * @throws java.lang.Exception
+	 */
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+		System.out.println("Going to test findMax, findMin and isEqual of sample");
+	}
+
+	/**
+	 * @throws java.lang.Exception
+	 */
+	@AfterClass
+	public static void tearDownAfterClass() throws Exception {
+		System.out.println("Tested findMax, findMin and isEqual of Sample");
+	}
+
+	/**
+	 * @throws java.lang.Exception
+	 */
+	@Before
+	public void setUp() throws Exception {
+		System.out.println("Setting up for a particular test");
+		System.out.println("Value of x = " + x);
+		if(x == 0)
+		{
+			
+			s1 = new Sample(1,5);
+			s2 = new Sample(1,-5);
+		}else {
+			s1 = new Sample(2,2);
+			s2 = new Sample(-2,2);
+		}
+		
+	}
+	
+
+	/**
+	 * @throws java.lang.Exception
+	 */
+	@After
+	public void tearDown() throws Exception {
+		System.out.println("Tearing down a particular Test");
+	}
+	
+
+	/**
+	 * Test method for {@link com.skillverse.Sample#findMax()}.
+	 */
+	@Test
+	public void testFindMax() {
+		assertEquals("Both Positive Values", 5, s1.findMax());
+		assertEquals("One Positive, One Negative", 1, s2.findMax());
+	
+	}
+	
+	/**
+	 * Test method for {@link com.skillverse.Sample#findMin()}.
+	 */
+	@Test
+	public void testFindMin() {
+		assertEquals("Both Positive", 1, s1.findMin());
+		assertEquals("One Positive, One Negative ", -5, s2.findMin());
+		x = x + 1;
+	}
+	
+	/**
+	 * Test method for {@link com.skillverse.Sample#isEqual()}.
+	 */
+	@Test
+	public void testIsEqual() {
+		
+		assertEquals("Both same", true, s1.isEqual());
+		assertEquals("Different", false, s2.isEqual());
+	}
+	
+	
+
+}

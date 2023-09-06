@@ -1,0 +1,19 @@
+package com.skillverse;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+public class TestMyClass {
+
+	
+	@Test
+	public void test() {
+		assertNull(new MyClass(null, "cambodia").getStr1());
+	}
+
+}

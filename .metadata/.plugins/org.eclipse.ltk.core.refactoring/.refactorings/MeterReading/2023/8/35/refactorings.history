@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;org.skillversecommunity.junitcourse&apos; to &apos;aupp.junit&apos;&#x0D;&#x0A;- Original project: &apos;MeterReading&apos;&#x0D;&#x0A;- Original element: &apos;MeterReading/src/org.skillversecommunity.junitcourse&apos;&#x0D;&#x0A;- Renamed element: &apos;MeterReading/src/aupp.junit&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;org.skillversecommunity.junitcourse&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;org.skillversecommunity.junitcourse" name="aupp.junit" qualified="false" references="true" stamp="1693163644441" textual="false" version="1.0"/>
+</session>

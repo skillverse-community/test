@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\Lenovo\Downloads\AdminManagement"/>
+			<item value="C:\Users\Lenovo\Downloads\LoadBalancerClient"/>
+			<item value="C:\Users\Lenovo\Downloads\LoadBalancedServer"/>
+			<item value="C:\Users\Lenovo\Downloads\demoConsumer"/>
+			<item value="C:\Users\Lenovo\Downloads\demo"/>
+			<item value="C:\Users\Lenovo\Downloads\demoClient"/>
+			<item value="C:\Users\Lenovo\Downloads\SpringBoot &amp; Microservice Materials\Section 3-Microservice Communication(Only Codes)\Fullfedged Example (Only Codes)\HomeAddressService"/>
+			<item value="C:\Users\Lenovo\Downloads\SpringBoot &amp; Microservice Materials\Section 3-Microservice Communication(Only Codes)\Fullfedged Example (Only Codes)\StudentService"/>
+			<item value="C:\Users\Lenovo\Downloads\SpringBoot &amp; Microservice Materials\Section 4-Creating StandaloneApps-(Only Codea)\Emp"/>
+			<item value="C:\Users\Lenovo\Downloads\HomeAddressService"/>
+			<item value="C:\Users\Lenovo\Downloads\StudentService"/>
+			<item value="C:\Users\Lenovo\Downloads\userService"/>
+			<item value="C:\Users\Lenovo\Downloads\addressService"/>
+			<item value="C:\Users\Lenovo\Downloads\demoDB"/>
+			<item value="C:\Users\Lenovo\Downloads\dbApp"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+		</list>
+		<list key="groupId">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+</section>

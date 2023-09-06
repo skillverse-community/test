@@ -1,0 +1,36 @@
+package aupp.atc;
+
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Platform;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+public class AlertHandler {
+	public static void main(String args[])
+	{
+		WebDriver driver = new FirefoxDriver(); 
+		//Set implicit wait of 10 seconds 
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
+		//Launch sampleSiteForSelenium driver.get("https://artoftesting.com/samplesiteforselenium"); 
+		//Handling alert boxes 
+		//Click on generate alert button 
+		driver.findElement(By.cssSelector("div#AlertBox button")).click(); 
+		//Using Alert class to first switch to or focus to the alert box 
+		Alert alert = driver.switchTo().alert(); 
+		//Using accept() method to accept the alert box 
+		alert.accept(); 
+		//Handling confirm box 
+		//Click on Generate Confirm Box 
+		driver.findElement(By.cssSelector("div#ConfirmBox button")).click(); 
+		Alert confirmBox = driver.switchTo().alert(); 
+		//Using dismiss() command to dismiss the confirm box 
+		confirmBox.dismiss(); 
+
+	}
+}

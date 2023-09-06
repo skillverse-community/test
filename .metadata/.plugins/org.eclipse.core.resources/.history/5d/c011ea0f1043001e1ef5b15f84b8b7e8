@@ -1,0 +1,62 @@
+/**
+ * 
+ */
+package com.skillverse;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+/**
+ * @author Lenovo
+ *
+ */
+public class TestSample {
+
+	/**
+	 * @throws java.lang.Exception
+	 */
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+		System.out.println("Going to test findMax of sample");
+	}
+
+	/**
+	 * @throws java.lang.Exception
+	 */
+	@AfterClass
+	public static void tearDownAfterClass() throws Exception {
+		System.out.println("Tested findMax of Sample");
+	}
+
+	/**
+	 * @throws java.lang.Exception
+	 */
+	@Before
+	public void setUp() throws Exception {
+		System.out.println("Setting up findMax of Sample");
+	}
+	
+
+	/**
+	 * @throws java.lang.Exception
+	 */
+	@After
+	public void tearDown() throws Exception {
+		System.out.println("Tearing down findmax of Sample");
+	}
+	
+
+	/**
+	 * Test method for {@link com.skillverse.Sample#findMax()}.
+	 */
+	@Test
+	public void testFindMax() {
+		assertEquals("Passed", 5, new Sample(1,5).findMax());
+	}
+
+}

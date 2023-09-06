@@ -1,0 +1,27 @@
+package org.skillversecommunity.junitcourse;
+
+/**
+ * Holds the constants for the application
+ * 
+ * @author Skillverse Community
+ * @since 27.08.2023
+ * @version 1.0
+
+ *
+ */
+public class Constants {
+
+	public static final String DIGITAL_METER_TYPE = "digital";
+	public static final String MECHANICAL_METER_TYPE = "mechanical";
+	
+	public static final String GREEN_COMMERCIAL_TYPE = "green";
+	public static final String BLUE_COMMERCIAL_TYPE = "blue";
+	public static final String RED_COMMERCIAL_TYPE = "red";
+	
+	public static final String SMALL_INDUSTRY_TYPE = "small";
+	public static final String MEDIUM_INDUSTRY_TYPE = "medium";
+	public static final String HEAVY_INDUSTRY_TYPE = "heavy";
+	
+	
+	
+}

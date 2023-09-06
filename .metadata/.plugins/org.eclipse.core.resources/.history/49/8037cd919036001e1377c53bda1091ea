@@ -1,0 +1,33 @@
+package com.skillverse.Emp.controler;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.skillverse.Emp.entity.Employee;
+import com.skillverse.Emp.service.EmployeeService;
+
+
+@RestController
+@RequestMapping("/emp")
+public class EmployeeControler {
+
+	@Autowired
+	EmployeeService service;
+	@PostMapping("/save")
+	public Employee saveEmployee(@RequestBody Employee e)
+	{
+		return service.createEmployee(e);
+	}
+	
+	@GetMapping("/get")
+	public List<Employee> getAllEmployees()
+	{
+		return service.getEmployees();
+	}
+}

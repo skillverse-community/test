@@ -1,0 +1,13 @@
+package com.skillverse;
+
+public class MyClass {
+
+	String str1;
+	String str2;
+	
+	public MyClass(String s1, String s2)
+	{
+		this.str1 = s1;
+		this.str2 = s2;
+	}
+}

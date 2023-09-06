@@ -1,0 +1,53 @@
+package com.skillverse;
+
+public abstract class Consumer {
+
+	private String name;
+	private String address;
+	private String meterId;
+	private double baseChargePerUnit;
+	
+	
+	public Consumer(String n, String a, String id, double b)
+	{
+		this.name = n;
+		this.address = a;
+		this.meterId = id;
+		this.baseChargePerUnit = b;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getMeterId() {
+		return meterId;
+	}
+
+	public void setMeterId(String meterId) {
+		this.meterId = meterId;
+	}
+
+	public double getBaseChargePerUnit() {
+		return baseChargePerUnit;
+	}
+
+	public void setBaseChargePerUnit(double baseChargePerUnit) {
+		this.baseChargePerUnit = baseChargePerUnit;
+	}
+	
+	public 
+	
+}

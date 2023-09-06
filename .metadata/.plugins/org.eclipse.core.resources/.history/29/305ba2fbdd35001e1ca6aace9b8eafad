@@ -1,0 +1,5 @@
+package com.skillverse.entity;
+
+public class Employee {
+
+}

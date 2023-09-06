@@ -1,0 +1,57 @@
+package aupp.atc;
+
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Platform;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+public class AlertHandler {
+	public static void main(String args[])
+	{
+		WebDriver driver;
+		System.setProperty("webdriver.gecko.driver", "C:\\Users\\Lenovo\\Downloads\\geckodriver-v0.33.0-win32\\geckodriver.exe");
+		DesiredCapabilities dc = new DesiredCapabilities();
+		dc.setCapability("marionatte", false);
+		dc.setPlatform(Platform.ANY);
+	    dc.setBrowserName("firefox");
+		FirefoxOptions opt = new FirefoxOptions();
+		opt.merge(dc);
+		opt.setBinary("C:\\Program Files\\Mozilla Firefox\\firefox.exe");
+		driver = new FirefoxDriver(opt);
+		
+		//Set implicit wait of 10 seconds 
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
+		//Launch sampleSiteForSelenium 
+		driver.get("https://artoftesting.com/samplesiteforselenium");
+		JavascriptExecutor js = (JavascriptExecutor)driver; 
+		js.executeScript("scrollBy(0, 300)"); 
+
+		//Handling alert boxes 
+		//Click on generate alert button 
+		Actions action = new Actions(driver); 
+		WebElement element = driver.findElement(By.cssSelector("div#AlertBox button")); 
+		action.doubleClick(element).perform(); 
+		js.executeScript("scrollBy(0, -300)"); 
+		//Using Alert class to first switch to or focus to the alert box 
+		Alert alert = driver.switchTo().alert(); 
+		//Using accept() method to accept the alert box 
+		alert.accept(); 
+		//Handling confirm box 
+		//Click on Generate Confirm Box 
+		//driver.findElement(By.cssSelector("div#ConfirmBox button")).click(); 
+		//Alert confirmBox = driver.switchTo().alert(); 
+		//Using dismiss() command to dismiss the confirm box 
+		//confirmBox.dismiss(); 
+		System.out.println("Done");
+
+	}
+}

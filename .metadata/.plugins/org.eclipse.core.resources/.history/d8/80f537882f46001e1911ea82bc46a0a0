@@ -1,0 +1,31 @@
+package aupp.atc;
+
+import org.openqa.selenium.Platform;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+public class Test {
+
+	public static void main(String[] args) {
+		//Creating a driver object referencing WebDriver interface
+		WebDriver driver;
+		//Setting webdriver.gecko.driver property
+		System.setProperty("webdriver.gecko.driver", "C:\\Users\\Lenovo\\Downloads\\geckodriver-v0.33.0-win32\\geckodriver.exe");
+		DesiredCapabilities dc = new DesiredCapabilities();
+		dc.setCapability("marionatte", false);
+		dc.setPlatform(Platform.ANY);
+	    dc.setBrowserName("firefox");
+		FirefoxOptions opt = new FirefoxOptions();
+		opt.merge(dc);
+		opt.setBinary("C:\\Program Files\\Mozilla Firefox\\firefox.exe");
+		//Instantiating driver object and launching browser
+		driver = new FirefoxDriver(opt);
+		//Using get() method to open a webpage
+		driver.get("https://artoftesting.com");
+		//Closing the browser
+		driver.quit();
+		System.out.println("Done");
+	}
+}

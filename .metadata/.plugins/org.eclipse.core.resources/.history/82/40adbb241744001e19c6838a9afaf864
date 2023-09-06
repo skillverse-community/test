@@ -1,0 +1,51 @@
+package org.skillversecommunity.example1;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+/**
+ * Class to test MyClass
+ * Notice: There is no setUp and tearDown methods
+ * 
+ * @author Skillverse Community
+ * @since 26.08.2023
+ * @version 1.0
+ *
+ */
+public class TestMyClass {
+
+	//Testing the case when len1 > len2
+	@Test // Considered to be a test case
+	public void test_getLengthDifference_len1GreaterThanlen2() {
+		String failingMessage = "length of string 1 is greater than length of string 2 : getLengthDifference(): MyClass";
+		assertEquals(failingMessage,8, new MyClass("123456789", "1").getLengthDifference());
+	}
+	
+	//Testing the case when len1 > len2
+	@Test // Considered to be a test case
+	public void test_getLengthDifference_len1LesserThanlen2() {
+		String failingMessage = "length of string 1 is lesser than length of string 2 : getLengthDifference(): MyClass";
+		assertEquals(failingMessage,8, new MyClass("1", "123456789").getLengthDifference());
+	}
+	
+	//Testing the case when len1 > len2
+	@Test (expected = NullPointerException.class)// Considered to be a test case
+	public void test_getLengthDifference_str1_is_null() {
+			String failingMessage = "str1 is null : getLengthDifference(): MyClass";
+			new MyClass(null, "123456789").getLengthDifference();
+	}
+	
+	//Testing the case when len1 > len2
+	@Test (expected = NullPointerException.class)// Considered to be a test case
+	public void test_getLengthDifference_str2_is_null() {
+			String failingMessage = "str1 is null : getLengthDifference(): MyClass";
+			new MyClass(null, "123456789").getLengthDifference();
+	}
+	
+
+}

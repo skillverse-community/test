@@ -1,0 +1,37 @@
+package aupp.atc;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Platform;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+public class TestChrome {
+
+	public static void main(String[] args) {
+		//Creating a driver object referencing WebDriver interface
+		WebDriver driver;
+		//Setting webdriver.gecko.driver property
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Lenovo\\Downloads\\chrome-win32\\chrome-win32\\chrome.exe");
+		DesiredCapabilities dc = new DesiredCapabilities();
+		dc.setCapability("marionatte", false);
+		dc.setPlatform(Platform.ANY);
+	    dc.setBrowserName("chrome");
+		FirefoxOptions opt = new FirefoxOptions();
+		opt.merge(dc);
+		//opt.setBinary("webdriver.chrome.driver");
+		//Instantiating driver object and launching browser
+		driver = new ChromeDriver();
+		//Using get() method to open a webpage
+		driver.get("https://www.saucedemo.com/");
+		driver.findElement(By.id("login-button")).click();
+
+		//Closing the browser
+		driver.quit();
+		System.out.println("Done");
+	}
+}
+
+

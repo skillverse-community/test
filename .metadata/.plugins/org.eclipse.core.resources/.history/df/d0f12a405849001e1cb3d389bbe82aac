@@ -1,0 +1,56 @@
+package org.skillversecommunity;
+
+public class Toy {
+
+	private String _name;
+	private int _price;
+	private int _ageRangeStart;
+	private int _ageRangeEnd;
+	
+	/**
+	 * Parameterized Constructor
+	 * @param _name
+	 * @param _price
+	 * @param _ageRangeStart
+	 * @param _ageRangeEnd
+	 */
+	public Toy(String _name, int _price, int _ageRangeStart, int _ageRangeEnd) {
+		super();
+		this._name = _name;
+		this._price = _price;
+		this._ageRangeStart = _ageRangeStart;
+		this._ageRangeEnd = _ageRangeEnd;
+	}
+
+	/**
+	 * @return the _name
+	 */
+	public String get_name() {
+		return _name;
+	}
+
+	/**
+	 * @return the _price
+	 */
+	public int get_price() {
+		return _price;
+	}
+
+	/**
+	 * @return the _ageRangeStart
+	 */
+	public int get_ageRangeStart() {
+		return _ageRangeStart;
+	}
+
+	/**
+	 * @return the _ageRangeEnd
+	 */
+	public int get_ageRangeEnd() {
+		return _ageRangeEnd;
+	}
+	
+	
+	
+	
+}

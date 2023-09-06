@@ -1,0 +1,64 @@
+package munshi.shiladitya.dbApp;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name = "Employee_table")
+public class Employee {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int _id;
+	
+	@Column(name = "emp__name")
+	private String _name;
+	
+	@Column(name = "emp_salary")
+	private double _salary;
+	
+	public Employee()
+	{
+		
+	}
+
+	public Employee(int _id, String _name, double _salary) {
+		super();
+		this._id = _id;
+		this._name = _name;
+		this._salary = _salary;
+	}
+
+	public int get_id() {
+		return _id;
+	}
+
+	public void set_id(int _id) {
+		this._id = _id;
+	}
+
+	public String get_name() {
+		return _name;
+	}
+
+	public void set_name(String _name) {
+		this._name = _name;
+	}
+
+	public double get_salary() {
+		return _salary;
+	}
+
+	public void set_salary(double _salary) {
+		this._salary = _salary;
+	}
+	
+	
+	
+	
+}

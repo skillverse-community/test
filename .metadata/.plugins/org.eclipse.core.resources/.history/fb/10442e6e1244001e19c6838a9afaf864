@@ -1,0 +1,32 @@
+package org.skillversecommunity.example1;
+
+/**
+ * A trivial class to demonstrate Junit Testing. 
+ * This class will be tested for
+ *  
+ * @author SkillVerse Community
+ * @Since 26.08.2023
+ * @version 1.0
+ *
+ */
+public class MyClass {
+
+	String _str1; //instance variable - notice the naming convention
+	String _str2;
+	
+	public MyClass(String s1, String s2)
+	{
+		this.str1 = s1;
+		this.str2 = s2;
+	}
+
+	public String getStr1() {
+		return str1;
+	}
+
+	public String getStr2() {
+		return str2;
+	}
+	
+	
+}

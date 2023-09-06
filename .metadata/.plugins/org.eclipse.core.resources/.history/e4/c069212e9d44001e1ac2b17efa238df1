@@ -1,0 +1,16 @@
+package org.skillversecommunity.junitcourse;
+
+import java.util.Date;
+
+public class BusinessConsumer extends Consumer{
+
+	public String _businessType;
+	
+	public BusinessConsumer(String _consumerName, String _consumerAddress, String _meterId, double _lastMeterReading,
+			double _currentMeterReading, Date _lastMeterRaedingDate, Date _currentMeterReadingDate, String _businessType) {
+		super(_consumerName, _consumerAddress, _meterId, _lastMeterReading, _currentMeterReading, _lastMeterRaedingDate,
+				_currentMeterReadingDate);
+		this._businessType = _businessType;
+	}
+
+}

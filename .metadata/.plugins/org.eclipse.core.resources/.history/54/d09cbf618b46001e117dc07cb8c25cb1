@@ -1,0 +1,42 @@
+package aupp.atc;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Platform;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+public class Test {
+
+	public static void main(String[] args) {
+		//Creating a driver object referencing WebDriver interface
+		WebDriver driver;
+		//Setting webdriver.gecko.driver property
+		System.setProperty("webdriver.gecko.driver", "C:\\Users\\Lenovo\\Downloads\\geckodriver-v0.33.0-win32\\geckodriver.exe");
+		DesiredCapabilities dc = new DesiredCapabilities();
+		dc.setCapability("marionatte", false);
+		dc.setPlatform(Platform.ANY);
+	    dc.setBrowserName("firefox");
+		FirefoxOptions opt = new FirefoxOptions();
+		opt.merge(dc);
+		opt.setBinary("C:\\Program Files\\Mozilla Firefox\\firefox.exe");
+		//Instantiating driver object and launching browser
+		driver = new FirefoxDriver(opt);
+		driver.get("https://www.saucedemo.com/");
+		driver.findElement(By.id("user-name")).sendKeys("standard_user");
+		driver.findElement(By.id("password")).sendKeys("secret_sauce");
+		driver.findElement(By.id("login-button")).click();
+		List<WebElement> elems = driver.findElements(By.className("btn btn_primary btn_small btn_inventory"));
+		for(int i = 0; i<elems.size(); i++)
+		{
+			elems.get(i).click();
+			System.out.println("Cliked");
+		}
+		driver.findElement(By.className("shopping_cart_link")).click();
+		System.out.println("Done");
+	}
+}

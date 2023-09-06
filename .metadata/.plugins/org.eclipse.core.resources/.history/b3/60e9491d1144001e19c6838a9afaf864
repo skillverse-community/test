@@ -1,0 +1,23 @@
+package org.skillversecommunity.example1;
+
+public class MyClass {
+
+	String str1;
+	String str2;
+	
+	public MyClass(String s1, String s2)
+	{
+		this.str1 = s1;
+		this.str2 = s2;
+	}
+
+	public String getStr1() {
+		return str1;
+	}
+
+	public String getStr2() {
+		return str2;
+	}
+	
+	
+}

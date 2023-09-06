@@ -1,0 +1,27 @@
+package com.sample;
+
+import java.util.List;
+
+import com.jaunt.Document;
+import com.jaunt.Element;
+import com.jaunt.JauntException;
+import com.jaunt.UserAgent;
+
+public class JauntHandler {
+
+	public static void main(String[] args) {
+		try{
+			  UserAgent userAgent = new UserAgent();                       //create new userAgent (headless browser).
+			  userAgent.visit("http://oracle.com");                        //visit a url  
+			  Document doc = userAgent.doc;
+			  List<Element> anchors = doc.findEvery("<a>");
+			  
+			  //print the document as HTML
+			}
+			catch(JauntException e){         //if an HTTP/connection error occurs, handle JauntException.
+			  System.err.println(e);
+			}
+
+	}
+
+}

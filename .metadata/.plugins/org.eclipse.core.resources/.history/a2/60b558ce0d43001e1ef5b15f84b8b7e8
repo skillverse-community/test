@@ -1,0 +1,36 @@
+package com.skillverse;
+
+public class HouseholdConsumer extends Consumer {
+
+	private double _rebatePercentageOnBase;
+	private double _lastReading;
+	private double _currentReading;
+	
+	public HouseholdConsumer(String n, String a, String id, double b, double r, double lr, double cr) {
+		super(n, a, id, b);
+		_rebatePercentageOnBase = r;
+		_lastReading = lr;
+		_currentReading = cr;
+		
+	}
+
+	@Override
+	public double computeElectrictyBill() {
+		return (((_currentReading - _lastReading)*(super.getBaseChargePerUnit())*(100 - _rebatePercentageOnBase))/100);
+	}
+
+	public double get_rebatePercentageOnBase() {
+		return _rebatePercentageOnBase;
+	}
+
+	public double get_lastReading() {
+		return _lastReading;
+	}
+
+	public double get_currentReading() {
+		return _currentReading;
+	}
+	
+	
+
+}

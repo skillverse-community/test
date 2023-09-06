@@ -1,0 +1,22 @@
+package com.skillverse;
+
+public class HouseholdConsumer extends Consumer {
+
+	private double _rebatePercentageOnBase;
+	private double _lastReading;
+	private double _currentReading;
+	
+	public HouseholdConsumer(String n, String a, String id, double b) {
+		super(n, a, id, b);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public double computeElectrictyBill() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	
+
+}

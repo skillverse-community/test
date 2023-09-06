@@ -1,0 +1,5 @@
+package com.skillverse;
+
+public abstract class Consumer {
+
+}

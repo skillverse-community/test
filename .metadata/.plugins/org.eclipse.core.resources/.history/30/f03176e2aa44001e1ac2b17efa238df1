@@ -1,0 +1,16 @@
+package org.skillversecommunity.junitcourse;
+
+public class Constants {
+
+	public static final String DIGITAL_METER_TYPE = "digital";
+	public static final String MECHANICAL_METER_TYPE = "mechanical";
+	
+	public static final String GREEN_COMMERCIAL_TYPE = "green";
+	public static final String BLUE_COMMERCIAL_TYPE = "blue";
+	public static final String RED_COMMERCIAL_TYPE = "red";
+	
+	public static final String 
+	
+	
+	
+}

@@ -1,0 +1,19 @@
+package org.skillversecommunity.example1;
+
+import org.junit.runner.JUnitCore;
+import org.junit.runner.Result;
+
+import com.skillversecommunity.suit.AllTests;
+
+public class SuitRunner {
+
+	public static void main(String[] args) {
+		
+		System.out.println("Running Main");
+		Result result = JUnitCore.runClasses(AllTests.class);
+		System.out.println(result.wasSuccessful());
+		
+
+	}
+
+}

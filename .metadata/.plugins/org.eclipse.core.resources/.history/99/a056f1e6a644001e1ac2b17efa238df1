@@ -1,0 +1,11 @@
+package org.skillversecommunity.junitcourse;
+
+public class HouseholdConsumer extends Consumer implements InvoiceGenerator {
+
+	@Override
+	public Invoice generateInvoice() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

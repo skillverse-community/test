@@ -1,0 +1,13 @@
+package com.skillverse;
+
+import org.junit.runner.JUnitCore;
+import org.junit.runner.Result;
+
+public class SuitRunner {
+
+	public static void main(String[] args) {
+		Result result = JUnitCore.runClasses(AllTests.class);
+
+	}
+
+}

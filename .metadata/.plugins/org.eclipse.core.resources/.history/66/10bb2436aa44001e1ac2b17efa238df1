@@ -1,0 +1,40 @@
+package org.skillversecommunity.junitcourse;
+
+import java.util.Date;
+
+/**
+ * Represents a Business Consumer
+ * A business consumer has all the properties of a consumer and it has to generate an invoice
+ * So this extends Consumer and implements Invoice Generator
+ * 
+ * @author SkillVerse Community
+ * @since 27.08.2023
+ * @version 1.0
+ *
+ */
+public class BusinessConsumer extends Consumer implements InvoiceGenerator{
+
+	public String _businessType;
+	
+	public BusinessConsumer(String _consumerName, String _consumerAddress, String _meterId, double _lastMeterReading,
+			double _currentMeterReading, Date _lastMeterRaedingDate, Date _currentMeterReadingDate, String _businessType) {
+		super(_consumerName, _consumerAddress, _meterId, _lastMeterReading, _currentMeterReading, _lastMeterRaedingDate,
+				_currentMeterReadingDate);
+		this._businessType = _businessType;
+	}
+
+	/**
+	 * @return the _businessType
+	 */
+	public String get_businessType() {
+		return _businessType;
+	}
+
+	@Override
+	public Invoice generateInvoice() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+}
